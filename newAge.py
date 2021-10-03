@@ -1,7 +1,8 @@
-# importing the modules for the programming libraries
+# Raw input End
 import os
 import time
 import re
+from datetime import datetime
 
 # setting that variable i to  0.
 i = 0
@@ -24,21 +25,17 @@ while i <= 10:
             # if not break the loop
         else:
             break
-        # join all the data
+    # join all the data
     DLinfo = '\n'.join(data)
 
-DLinfo = message
-print(message.replace(" ", ""))
-
-myString = DLinfo
-myString = re.sub(r"[\n\t\s]*", "", myString)
-print(myString)
-
-text = new
-
-found = re.search('DBB(.+?)DBA', text).group(1)
-
-print(found)
+    text = DLinfo
+    
+    found = re.search('DBB(.+?)DBA', text).group(1)
+    
+    cardDOB = datetime.strptime(found, "%m%d%Y")
+    
+    print(cardDOB)
+    
 
 
 
